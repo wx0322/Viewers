@@ -49,7 +49,10 @@ function PanelStudyBrowser({
         };
       });
       if (isMounted.current) {
-        setStudyDisplayList(actuallyMappedStudies);
+        setStudyDisplayList(prevArray => [
+          ...prevArray,
+          ...actuallyMappedStudies,
+        ]);
       }
     }
 

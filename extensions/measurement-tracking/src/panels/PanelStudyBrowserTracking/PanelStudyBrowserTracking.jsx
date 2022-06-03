@@ -109,7 +109,10 @@ function PanelStudyBrowserTracking({
         };
       });
 
-      setStudyDisplayList(actuallyMappedStudies);
+      setStudyDisplayList(prevArray => [
+        ...prevArray,
+        ...actuallyMappedStudies,
+      ]);
     }
 
     StudyInstanceUIDs.forEach(sid => fetchStudiesForPatient(sid));
