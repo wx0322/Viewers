@@ -2,42 +2,51 @@ import { ContextMenu } from '../';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ContextMenuMeasurements = ({
-  onGetMenuItems,
-  onSetLabel,
-  onClose,
-  onDelete,
-}) => {
-  const defaultMenuItems = [
-    {
-      label: 'Delete measurement',
-      actionType: 'Delete',
-      action: item => {
-        onDelete(item);
-        onClose();
-      },
-      value: {},
-    },
-    {
-      label: 'Add Label',
-      actionType: 'setLabel',
-      action: item => {
-        onSetLabel(item);
-        onClose();
-      },
-      value: {},
-    },
-  ];
 
-  const menuItems = onGetMenuItems(defaultMenuItems);
+const imageAreaMenus = [
+  {
+    id: 'forExistingMeasurement',
+    selector: ({ nearbyToolData }) => !!nearbyToolData,
+    items: [
+      {
+        label: 'Delete measurement',
+        actionType: 'RunCommands',
+        commands: [
+          {
+            commandName: 'deleteMeasurement',
+          }
+        ],
+      },
+      {
+        label: 'Add Label',
+        actionType: 'RunCommands',
+        commands: [
+          {
+            commandName: 'setLabel',
+          },
+        ]
+      },
+    ],
+  },
+];
+
+const ContextMenuMeasurements = ({ onGetMenuItems, refs = {}, items = imageAreaMenus, ...props }) => {
+  const menuItems = onGetMenuItems(
+    items,
+    refs,
+    props
+  );
+
+  if (!menuItems) {
+    return null;
+  }
 
   return <ContextMenu items={menuItems} />;
 };
 
 ContextMenuMeasurements.propTypes = {
   onClose: PropTypes.func.isRequired,
-  onSetLabel: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
+  onRunCommands: PropTypes.func.isRequired,
   onGetMenuItems: PropTypes.func.isRequired,
 };
 

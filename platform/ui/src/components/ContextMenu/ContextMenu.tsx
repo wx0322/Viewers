@@ -25,7 +25,6 @@ ContextMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      actionType: PropTypes.string.isRequired,
       action: PropTypes.func.isRequired,
     })
   ).isRequired,

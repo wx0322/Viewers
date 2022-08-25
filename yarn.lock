@@ -4454,6 +4454,38 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
+"@radicalimaging/config-mode@^3.3.0":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/config-mode/-/config-mode-3.3.4.tgz#d8d4b130da51837b599978eba1628e78a789a013"
+  integrity sha512-5I3Thr1pxGRBBjlFu2fEF0z5b3wffl5lUPz24u6C4s/FibleHYyHN45grgRTwh4ISEx/p41B/exmxNVmyrtgNQ==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@cornerstonejs/tools" "^0.24.1"
+    config-point "^0.4.8"
+    gl-matrix "^3.4.3"
+    lodash "^4.17.21"
+    lodash.clonedeep "^4.5.0"
+    lodash.get "^4.4.2"
+
+"@radicalimaging/hp-extension@^3.3.1":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/hp-extension/-/hp-extension-3.3.5.tgz#1bd5b627ac81aa5c667420af23ad81d12b5a4514"
+  integrity sha512-34eu6d/SlqPNyFFtC/GMbHXSvDVasEBFnnW0ZiQp4OrBxcTID8sYJVrHTgdeAFd3LfTYTN6XuR9kM2QeDhcWFw==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@cornerstonejs/tools" "^0.24.1"
+    config-point "^0.4.8"
+    lodash "^4.17.21"
+
+"@radicalimaging/hp-mode@^3.3.2":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@radicalimaging/hp-mode/-/hp-mode-3.3.3.tgz#3f797e1a0a398556113b074e2373495828511133"
+  integrity sha512-yYl9IEdFklLAY3TDGtYJNlmMQ+AI+bL53iU1NwW5A6uqk+90JRoAcoGoG0vok25OY5TB3aFhZ1c1M3WipMZpjw==
+  dependencies:
+    "@babel/runtime" "7.7.6"
+    "@radicalimaging/config-mode" "^3.3.0"
+    config-point "^0.4.8"
+
 "@reach/router@^1.3.4":
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.3.4.tgz#d2574b19370a70c80480ed91f3da840136d10f8c"
@@ -12477,7 +12509,7 @@ gitignore@^0.7.0:
   resolved "https://registry.yarnpkg.com/gitignore/-/gitignore-0.7.0.tgz#062173df62344a572dfd76d98b59c45108562739"
   integrity sha512-6iE891OyeYQYVvdoWI/hcxDWJ0sOngSpIRadxLoYbsnZdqWIUsEfx+IrOpW3d/zWBA/eKYvs6ZZx6ogz2wEGoQ==
 
-gl-matrix@3.4.3, gl-matrix@^3.1.0:
+gl-matrix@3.4.3, gl-matrix@^3.1.0, gl-matrix@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
   integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==

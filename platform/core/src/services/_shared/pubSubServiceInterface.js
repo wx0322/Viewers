@@ -1,4 +1,5 @@
 import guid from '../../utils/guid';
+import * as Types from '../../Types';
 
 /**
  * Consumer must implement:
@@ -84,5 +85,23 @@ function _broadcastEvent(eventName, callbackProps) {
     this.listeners[eventName].forEach(listener => {
       listener.callback(callbackProps);
     });
+  }
+}
+
+/** Export a PubSubService class to be used instead of the individual items */
+export class PubSubService {
+  constructor(EVENTS) {
+    this.EVENTS = EVENTS;
+    this.subscribe = subscribe;
+    this._broadcastEvent = _broadcastEvent;
+    this._unsubscribe = _unsubscribe;
+    this._isValidEvent = _isValidEvent;
+    this.listeners = {};
+    this.unsubscriptions = [];
+  }
+
+  reset() {
+    this.unsubscriptions.forEach(unsub => unsub());
+    this.unsubscriptions = [];
   }
 }

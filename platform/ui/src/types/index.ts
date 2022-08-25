@@ -15,3 +15,9 @@ const StringNumber = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
 const StringArray = PropTypes.oneOfType([PropTypes.string, PropTypes.array]);
 
 export { StringNumber, StringArray, ThumbnailType };
+
+export type IProps = Record<string, unknown>;
+
+export type Predicate = (props: IProps) => boolean;
+
+export type Object = Record<string, unknown>;

@@ -103,6 +103,8 @@ export {
   ViewportOverlay,
 } from './components';
 
+export { Types } from './Types';
+
 /** These are mostly used in the docs */
 export { getIcon, ICONS } from './components/Icon/getIcon';
 export { BackgroundColor } from './pages/Colors/BackgroundColor';

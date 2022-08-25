@@ -27,6 +27,14 @@
     {
       "packageName": "@ohif/extension-tmtv",
       "version": "3.0.0"
+    },
+    {
+      "packageName": "@radicalimaging/hp-extension",
+      "version": "3.3.1"
+    },
+    {
+      "packageName": "@radicalimaging/tree-metadata",
+      "version": "3.0.0"
     }
   ],
   "modes": [
@@ -37,6 +45,18 @@
     {
       "packageName": "@ohif/mode-tmtv",
       "version": "3.0.0"
+    },
+    {
+      "packageName": "@radicalimaging/volume-mode",
+      "version": "3.3.1"
+    },
+    {
+      "packageName": "@radicalimaging/hp-mode",
+      "version": "3.3.2"
+    },
+    {
+      "packageName": "@radicalimaging/findings-mode",
+      "version": "3.3.0"
     }
   ],
   "modesFactory": [],

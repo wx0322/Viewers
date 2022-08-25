@@ -54,9 +54,11 @@ export default class ToolBarService {
 
   /**
    *
-   * @param {*} interaction
+   * @param {*} interaction - can be undefined to run nothing
+   * @param {*} extraOptions to include in the commands run
    */
-  recordInteraction(interaction) {
+  recordInteraction(interaction, extraOptions) {
+    if (!interaction) return;
     const commandsManager = this._commandsManager;
     const { groupId, itemId, interactionType, commands } = interaction;
 
@@ -64,7 +66,10 @@ export default class ToolBarService {
       case 'action': {
         commands.forEach(({ commandName, commandOptions, context }) => {
           if (commandName) {
-            commandsManager.runCommand(commandName, commandOptions, context);
+            commandsManager.runCommand(commandName,
+              {
+                ...commandOptions, ...extraOptions
+              }, context);
           }
         });
         break;
@@ -144,6 +149,10 @@ export default class ToolBarService {
         buttonSections: this.buttonSections,
       });
     }
+  }
+
+  getButton(id) {
+    return this.buttons[id];
   }
 
   setButtons(buttons) {
