@@ -113,6 +113,7 @@ export {
   GuiCustomizationService,
   Types,
   PubSubService,
+  Types,
 };
 
 export { OHIF };
