@@ -2,17 +2,21 @@
  * Formats a patient name for display purposes
  */
 export default function formatPN(name) {
-  if (!name) {
-    return;
-  }
+    if (!name) {
+        return;
+    }
 
-  // Convert the first ^ to a ', '. String.replace() only affects
-  // the first appearance of the character.
-  const commaBetweenFirstAndLast = name.replace('^', ', ');
+    if (typeof (name) === "object") {
+        return;
+    }
 
-  // Replace any remaining '^' characters with spaces
-  const cleaned = commaBetweenFirstAndLast.replace(/\^/g, ' ');
+    // Convert the first ^ to a ', '. String.replace() only affects
+    // the first appearance of the character.
+    const commaBetweenFirstAndLast = name.replace('^', ', ');
 
-  // Trim any extraneous whitespace
-  return cleaned.trim();
+    // Replace any remaining '^' characters with spaces
+    const cleaned = commaBetweenFirstAndLast.replace(/\^/g, ' ');
+
+    // Trim any extraneous whitespace
+    return cleaned.trim();
 }

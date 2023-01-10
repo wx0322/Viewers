@@ -30,9 +30,9 @@ window.config = {
         // qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
         // wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
         // new server
-        wadoUriRoot: 'https://domvja9iplmyu.cloudfront.net/dicomweb',
-        qidoRoot: 'https://domvja9iplmyu.cloudfront.net/dicomweb',
-        wadoRoot: 'https://domvja9iplmyu.cloudfront.net/dicomweb',
+        wadoUriRoot: 'http://localhost:44301/api',
+        qidoRoot: 'http://localhost:44301/api',
+        wadoRoot: 'http://localhost:44301/api',
         qidoSupportsIncludeField: false,
         supportsReject: false,
         imageRendering: 'wadors',
