@@ -6,9 +6,9 @@ export default function formatPN(name) {
         return;
     }
 
-    if (typeof (name) === "object") {
-        return;
-    }
+    //if (typeof (name) === "object") {
+    //    return;
+    //}
 
     // Convert the first ^ to a ', '. String.replace() only affects
     // the first appearance of the character.
