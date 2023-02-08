@@ -33,32 +33,32 @@ function Header({ children, menuOptions, isReturnEnabled, onClickReturnButton, i
             <div className="ml-4">{WhiteLabeling ? CustomLogo(React) : <Svg name="logo-ohif" />}</div>
           </div>
         </div>
-        <div className="flex items-center">{children}</div>
-        <div className="flex items-center">
-          <span className="mr-3 text-lg text-common-light">
-            {t('INVESTIGATIONAL USE ONLY')}
-          </span>
-          <Dropdown id="options" showDropdownIcon={false} list={menuOptions}>
-            <IconButton
-              id={"options-settings-icon"}
-              variant="text"
-              color="inherit"
-              size="initial"
-              className="text-primary-active"
-            >
-              <Icon name="settings" />
-            </IconButton>
-            <IconButton
-              id={"options-chevron-down-icon"}
-              variant="text"
-              color="inherit"
-              size="initial"
-              className="text-primary-active"
-            >
-              <Icon name="chevron-down" />
-            </IconButton>
-          </Dropdown>
-        </div>
+        {/*<div className="flex items-center">{children}</div>*/}
+        {/*<div className="flex items-center">*/}
+        {/*  <span className="mr-3 text-lg text-common-light">*/}
+        {/*    {t('INVESTIGATIONAL USE ONLY')}*/}
+        {/*  </span>*/}
+        {/*  <Dropdown id="options" showDropdownIcon={false} list={menuOptions}>*/}
+        {/*    <IconButton*/}
+        {/*      id={"options-settings-icon"}*/}
+        {/*      variant="text"*/}
+        {/*      color="inherit"*/}
+        {/*      size="initial"*/}
+        {/*      className="text-primary-active"*/}
+        {/*    >*/}
+        {/*      <Icon name="settings" />*/}
+        {/*    </IconButton>*/}
+        {/*    <IconButton*/}
+        {/*      id={"options-chevron-down-icon"}*/}
+        {/*      variant="text"*/}
+        {/*      color="inherit"*/}
+        {/*      size="initial"*/}
+        {/*      className="text-primary-active"*/}
+        {/*    >*/}
+        {/*      <Icon name="chevron-down" />*/}
+        {/*    </IconButton>*/}
+        {/*  </Dropdown>*/}
+        {/*</div>*/}
       </div>
     </NavBar>
   );
