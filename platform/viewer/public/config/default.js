@@ -13,7 +13,7 @@ window.config = {
           background: 'url(../assets/Kp_Logo.png)',
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
-          width: '200px',
+          width: '49px',
         },
       }, "Kp_Logo");
     },
