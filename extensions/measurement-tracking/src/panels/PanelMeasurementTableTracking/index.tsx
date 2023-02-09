@@ -11,6 +11,7 @@ import { DicomMetadataStore, utils } from '@ohif/core';
 import { useDebounce } from '@hooks';
 import ActionButtons from './ActionButtons';
 import { useTrackedMeasurements } from '../../getContextModule';
+import { useTranslation } from 'react-i18next';
 
 const { downloadCSVReport } = utils;
 const { formatDate } = utils;
@@ -23,6 +24,7 @@ const DISPLAY_STUDY_SUMMARY_INITIAL_VALUE = {
 };
 
 function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
+  const { t } = useTranslation();
   const [viewportGrid, viewportGridService] = useViewportGrid();
   const [measurementChangeTimestamp, setMeasurementsUpdated] = useState(
     Date.now().toString()
@@ -180,7 +182,7 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
       showOverlay: true,
       content: Dialog,
       contentProps: {
-        title: 'Enter your annotation',
+        title: t("MeasurementTable:EnterAnnotation"),
         noCloseButton: true,
         value: { label: measurement.label || '' },
         body: ({ value, setValue }) => {
@@ -210,8 +212,8 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
         },
         actions: [
           // temp: swap button types until colors are updated
-          { id: 'cancel', text: 'Cancel', type: 'primary' },
-          { id: 'save', text: 'Save', type: 'secondary' },
+          { id: 'cancel', text: t('Common:Cancel'), type: 'primary' },
+          { id: 'save', text: t('Common:Save'), type: 'secondary' },
         ],
         onSubmit: onSubmitHandler,
       },
