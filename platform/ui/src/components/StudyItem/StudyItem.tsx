@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
+import moment from 'moment';
 import { Icon } from '../';
 
 const baseClasses =
@@ -16,6 +16,12 @@ const StudyItem = ({
   isActive,
   onClick,
 }) => {
+
+  const studyDate =
+  date &&
+  moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY'], true).isValid() &&
+  moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY']).format('YYYY-MM-DD');
+
   return (
     <div
       className={classnames(
@@ -29,7 +35,7 @@ const StudyItem = ({
     >
       <div className="flex flex-col flex-1 px-4 pb-2">
         <div className="flex flex-row items-center justify-between pt-2 pb-2">
-          <div className="text-base text-white">{date}</div>
+          <div className="text-base text-white">{studyDate}</div>
           <div className="flex flex-row items-center text-base text-blue-300">
             <Icon name="group-layers" className="w-4 mx-2 text-blue-300" />
             {numInstances}

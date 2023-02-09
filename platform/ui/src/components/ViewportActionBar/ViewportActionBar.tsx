@@ -4,6 +4,7 @@ import { Icon, ButtonGroup, Button, CinePlayer } from '../';
 import useOnClickOutside from '../../utils/useOnClickOutside';
 import PatientInfo from '../PatientInfo';
 import { StringNumber } from '../../types';
+import moment from 'moment';
 
 const ViewportActionBar = ({
   studyData,
@@ -62,6 +63,10 @@ const ViewportActionBar = ({
     backgroundColor = '#031923';
   }
 
+  const cnStudyDate =
+  studyDate &&
+  moment(studyDate, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY'], true).isValid() &&
+  moment(studyDate, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY']).format('YYYY-MM-DD');
   return (
     <div
       className="flex flex-wrap items-center p-2 -mt-2 border-b select-none"
@@ -79,7 +84,7 @@ const ViewportActionBar = ({
         </div>
         <div className="flex flex-col justify-start ml-4">
           <div className="flex">
-            <span className="text-base text-white">{studyDate}</span>
+            <span className="text-base text-white">{cnStudyDate}</span>
             <span className="pl-2 ml-2 text-base border-l border-primary-light text-primary-light">
               S: {currentSeries}
             </span>
