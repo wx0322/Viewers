@@ -8,6 +8,7 @@ import {
   Dialog,
 } from '@ohif/ui';
 import { useTrackedMeasurements } from '../../getContextModule';
+import { useTranslation } from 'react-i18next';
 
 const { formatDate } = utils;
 
@@ -38,6 +39,7 @@ function PanelStudyBrowserTracking({
     { activeViewportIndex, viewports, numCols, numRows },
     viewportGridService,
   ] = useViewportGrid();
+  const {t} = useTranslation();
   const [
     trackedMeasurements,
     sendTrackedMeasurementsEvent,
@@ -62,7 +64,7 @@ function PanelStudyBrowserTracking({
     } catch (error) {
       console.warn(error);
       UINotificationService.show({
-        title: 'Thumbnail Double Click',
+        title: t('Common:ThumbnailDoubleClick'),
         message:
           'The selected display sets could not be added to the viewport due to a mismatch in the Hanging Protocol rules.',
         type: 'info',
@@ -473,7 +475,7 @@ function _mapDisplaySets(
             showOverlay: true,
             content: Dialog,
             contentProps: {
-              title: 'Delete Report',
+              title: 'Delete Report', // TODO 翻译进行中...
               body: () => (
                 <div className="p-4 text-white bg-primary-dark">
                   <p>Are you sure you want to delete this report?</p>

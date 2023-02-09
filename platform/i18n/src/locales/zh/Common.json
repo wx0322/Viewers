@@ -27,5 +27,6 @@
   "Save": "保存",
   "Create Report": "新建报告",
   "Measurements saved successfully": "测量值保存成功",
-  "Failed to store measurements": "测量值保存失败"
+  "Failed to store measurements": "测量值保存失败",
+  "ThumbnailDoubleClick": "双击缩略图"
 }
