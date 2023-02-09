@@ -144,8 +144,7 @@ const SidePanel = ({
                 onClick={() => {
                   setActiveTabIndex(index);
                   setPanelOpen(true);
-                }}
-              >
+                } }>
                 <Icon
                   name={childComponent.iconName}
                   className="text-primary-active"

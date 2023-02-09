@@ -320,7 +320,7 @@ function _mapMeasurementToDisplay(measurement, types, DisplaySetService) {
   const { displayText } = measurement;
   return {
     uid: measurement.uid,
-    label: measurement.label || '(empty)',
+    label: measurement.label || '(标注)',
     measurementType: measurement.type,
     displayText: displayText || [],
     isActive: measurement.selected,

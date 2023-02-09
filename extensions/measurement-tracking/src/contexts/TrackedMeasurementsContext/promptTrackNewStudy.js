@@ -35,17 +35,23 @@ function promptTrackNewStudy({ servicesManager, extensionManager }, ctx, evt) {
 
 function _askTrackMeasurements(UIViewportDialogService, viewportIndex) {
   return new Promise(function(resolve, reject) {
-    const message = 'Track measurements for this series?';
+    // const message = 'Track measurements for this series?';
+    const message = "是否追踪测量值?";
     const actions = [
-      { type: 'cancel', text: 'No', value: RESPONSE.CANCEL },
+      { type: 'cancel',
+      text: '否',
+      // text: 'No',
+      value: RESPONSE.CANCEL },
       {
         type: 'secondary',
-        text: 'No, do not ask again for this series',
+        text: '否，对该序列不再询问',
+        // text: 'No, do not ask again for this series',
         value: RESPONSE.NO_NOT_FOR_SERIES,
       },
       {
         type: 'primary',
-        text: 'Yes',
+        text: '是',
+        // text: 'Yes',
         value: RESPONSE.SET_STUDY_AND_SERIES,
       },
     ];

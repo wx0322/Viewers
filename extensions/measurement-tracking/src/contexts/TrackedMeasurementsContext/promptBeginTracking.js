@@ -27,24 +27,28 @@ function promptBeginTracking({ servicesManager, extensionManager }, ctx, evt) {
 
 function _askTrackMeasurements(UIViewportDialogService, viewportIndex) {
   return new Promise(function(resolve, reject) {
-    const message = 'Track measurements for this series?';
+    // const message = 'Track measurements for this series?';
+    const message = '是否追踪测量值?';
     const actions = [
       {
         id: 'prompt-begin-tracking-cancel',
         type: 'cancel',
-        text: 'No',
+        text: '否',
+        // text: 'No',
         value: RESPONSE.CANCEL,
       },
       {
         id: 'prompt-begin-tracking-no-do-not-ask-again',
         type: 'secondary',
-        text: 'No, do not ask again',
+        text: '否，不再询问',
+        // text: 'No, do not ask again',
         value: RESPONSE.NO_NEVER,
       },
       {
         id: 'prompt-begin-tracking-yes',
         type: 'primary',
-        text: 'Yes',
+        text: '是',
+        // text: 'Yes',
         value: RESPONSE.SET_STUDY_AND_SERIES,
       },
     ];

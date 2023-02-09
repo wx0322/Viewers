@@ -58,16 +58,19 @@ function promptHydrateStructuredReport(
 function _askTrackMeasurements(UIViewportDialogService, viewportIndex) {
   return new Promise(function(resolve, reject) {
     const message =
-      'Do you want to continue tracking measurements for this study?';
+      '是否对检查继续追踪测量？';
+      // 'Do you want to continue tracking measurements for this study?';
     const actions = [
       {
         type: 'secondary',
-        text: 'No',
+        text: '否',
+        // text: 'No',
         value: RESPONSE.CANCEL,
       },
       {
         type: 'primary',
-        text: 'Yes',
+        text: '是',
+        // text: 'Yes',
         value: RESPONSE.HYDRATE_REPORT,
       },
     ];

@@ -259,7 +259,7 @@ function _mapMeasurementToDisplay(measurement, index, types) {
 
   return {
     uid,
-    label: label || '(empty)',
+    label: label || '(标注)',
     measurementType: type,
     displayText: displayText || [],
     isActive: selected,
