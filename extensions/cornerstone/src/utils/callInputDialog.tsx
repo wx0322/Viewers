@@ -16,6 +16,7 @@ function callInputDialog(
   callback,
   isArrowAnnotateInputDialog = true
 ) {
+
   const dialogId = 'enter-annotation';
   const label = data
     ? isArrowAnnotateInputDialog
@@ -43,13 +44,13 @@ function callInputDialog(
       showOverlay: true,
       content: Dialog,
       contentProps: {
-        title: 'Enter your annotation',
+        title: "输入标注",
         value: { label },
         noCloseButton: true,
         onClose: () => UIDialogService.dismiss({ id: dialogId }),
         actions: [
-          { id: 'cancel', text: 'Cancel', type: 'primary' },
-          { id: 'save', text: 'Save', type: 'secondary' },
+          { id: 'cancel', text: '取消', type: 'primary' },
+          { id: 'save', text: '保存', type: 'secondary' },
         ],
         onSubmit: onSubmitHandler,
         body: ({ value, setValue }) => {

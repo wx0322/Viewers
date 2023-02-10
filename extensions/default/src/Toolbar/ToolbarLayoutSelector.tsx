@@ -85,7 +85,7 @@ function LayoutSelector({
   return (
     <ToolbarButton
       id="Layout"
-      label="Grid Layout"
+      label="网格布局 Grid Layout"
       icon="tool-layout"
       onInteraction={onInteractionHandler}
       className={className}
@@ -115,7 +115,7 @@ LayoutSelector.propTypes = {
 LayoutSelector.defaultProps = {
   rows: 3,
   columns: 3,
-  onLayoutChange: () => {},
+  onLayoutChange: () => { },
 };
 
 export default LayoutSelector;

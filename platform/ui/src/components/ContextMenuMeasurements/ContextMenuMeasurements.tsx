@@ -1,6 +1,7 @@
 import { ContextMenu } from '../';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContextMenuMeasurements = ({
   onGetMenuItems,
@@ -8,9 +9,11 @@ const ContextMenuMeasurements = ({
   onClose,
   onDelete,
 }) => {
+  const { t } = useTranslation("ContextMenu");
+
   const defaultMenuItems = [
     {
-      label: 'Delete measurement',
+      label: t('Delete measurement'),
       actionType: 'Delete',
       action: item => {
         onDelete(item);
@@ -19,7 +22,7 @@ const ContextMenuMeasurements = ({
       value: {},
     },
     {
-      label: 'Add Label',
+      label: t('Add Label'),
       actionType: 'setLabel',
       action: item => {
         onSetLabel(item);

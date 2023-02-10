@@ -79,7 +79,7 @@ const toolbarButtons = [
       primary: _createToolButton(
         'Length',
         'tool-length',
-        'Length',
+        '长度 Length',
         [
           {
             commandName: 'setToolActive',
@@ -104,13 +104,13 @@ const toolbarButtons = [
         icon: 'chevron-down',
         label: '',
         isActive: true,
-        tooltip: 'More Measure Tools',
+        tooltip: '更多测量工具 More Measure Tools',
       },
       items: [
         _createToolButton(
           'Length',
           'tool-length',
-          'Length',
+          '长度 Length',
           [
             {
               commandName: 'setToolActive',
@@ -134,7 +134,7 @@ const toolbarButtons = [
         _createToolButton(
           'Bidirectional',
           'tool-bidirectional',
-          'Bidirectional',
+          '双向 Bidirectional',
           [
             {
               commandName: 'setToolActive',
@@ -157,7 +157,7 @@ const toolbarButtons = [
         _createToolButton(
           'ArrowAnnotate',
           'tool-annotate',
-          'Annotation',
+          '标注 Annotation',
           [
             {
               commandName: 'setToolActive',
@@ -180,7 +180,7 @@ const toolbarButtons = [
         _createToolButton(
           'EllipticalROI',
           'tool-elipse',
-          'Ellipse',
+          '椭圆 Ellipse',
           [
             {
               commandName: 'setToolActive',
@@ -210,7 +210,7 @@ const toolbarButtons = [
     props: {
       type: 'tool',
       icon: 'tool-zoom',
-      label: 'Zoom',
+      label: '缩放 Zoom',
       commands: [
         {
           commandName: 'setToolActive',
@@ -231,7 +231,7 @@ const toolbarButtons = [
       primary: _createToolButton(
         'WindowLevel',
         'tool-window-level',
-        'Window Level',
+        '窗位 Window Level',
         [
           {
             commandName: 'setToolActive',
@@ -245,18 +245,18 @@ const toolbarButtons = [
       ),
       secondary: {
         icon: 'chevron-down',
-        label: 'W/L Manual',
+        label: '窗位预设 W/L Manual',
         isActive: true,
         tooltip: 'W/L Presets',
       },
       isAction: true, // ?
       renderer: WindowLevelMenuItem,
       items: [
-        _createWwwcPreset(1, 'Soft tissue', '400 / 40'),
-        _createWwwcPreset(2, 'Lung', '1500 / -600'),
-        _createWwwcPreset(3, 'Liver', '150 / 90'),
-        _createWwwcPreset(4, 'Bone', '2500 / 480'),
-        _createWwwcPreset(5, 'Brain', '80 / 40'),
+        _createWwwcPreset(1, '软组织 Soft tissue', '400 / 40'),
+        _createWwwcPreset(2, '肺 Lung', '1500 / -600'),
+        _createWwwcPreset(3, '肝 Liver', '150 / 90'),
+        _createWwwcPreset(4, '骨骼 Bone', '2500 / 480'),
+        _createWwwcPreset(5, '大脑 Brain', '80 / 40'),
       ],
     },
   },
@@ -267,7 +267,7 @@ const toolbarButtons = [
     props: {
       type: 'tool',
       icon: 'tool-move',
-      label: 'Pan',
+      label: '移动 Pan',
       commands: [
         {
           commandName: 'setToolActive',
@@ -284,7 +284,7 @@ const toolbarButtons = [
     type: 'ohif.action',
     props: {
       icon: 'tool-capture',
-      label: 'Capture',
+      label: '截图 Capture',
       type: 'action',
       commands: [
         {
@@ -325,7 +325,7 @@ const toolbarButtons = [
     props: {
       type: 'tool',
       icon: 'tool-crosshair',
-      label: 'Crosshairs',
+      label: '十字线 Crosshairs',
       commands: [
         {
           commandName: 'setToolActive',
@@ -348,7 +348,7 @@ const toolbarButtons = [
       primary: _createActionButton(
         'Reset',
         'tool-reset',
-        'Reset View',
+        '复原 Reset View',
         [
           {
             commandName: 'resetViewport',
@@ -362,13 +362,13 @@ const toolbarButtons = [
         icon: 'chevron-down',
         label: '',
         isActive: true,
-        tooltip: 'More Tools',
+        tooltip: '更多工具 More Tools',
       },
       items: [
         _createActionButton(
           'Reset',
           'tool-reset',
-          'Reset View',
+          '复原 Reset View',
           [
             {
               commandName: 'resetViewport',
@@ -381,7 +381,7 @@ const toolbarButtons = [
         _createActionButton(
           'rotate-right',
           'tool-rotate-right',
-          'Rotate Right',
+          '顺时针旋转 Rotate Right',
           [
             {
               commandName: 'rotateViewportCW',
@@ -394,7 +394,7 @@ const toolbarButtons = [
         _createActionButton(
           'flip-horizontal',
           'tool-flip-horizontal',
-          'Flip Horizontally',
+          '水平翻转 Flip Horizontally',
           [
             {
               commandName: 'flipViewportHorizontal',
@@ -404,7 +404,7 @@ const toolbarButtons = [
           ],
           'Flip Horizontal'
         ),
-        _createToggleButton('StackImageSync', 'link', 'Stack Image Sync', [
+        _createToggleButton('StackImageSync', 'link', '堆叠图像同步 Stack Image Sync', [
           {
             commandName: 'toggleStackImageSync',
             commandOptions: {},
@@ -414,7 +414,7 @@ const toolbarButtons = [
         _createToggleButton(
           'ReferenceLines',
           'tool-referenceLines', // change this with the new icon
-          'Reference Lines',
+          '定位线 Reference Lines',
           [
             {
               commandName: 'toggleReferenceLines',
@@ -426,7 +426,7 @@ const toolbarButtons = [
         _createToolButton(
           'StackScroll',
           'tool-stack-scroll',
-          'Stack Scroll',
+          '滑动切换图层 Stack Scroll',
           [
             {
               commandName: 'setToolActive',
@@ -441,7 +441,7 @@ const toolbarButtons = [
         _createActionButton(
           'invert',
           'tool-invert',
-          'Invert',
+          '灰度反转 Invert',
           [
             {
               commandName: 'invertViewport',
@@ -454,7 +454,7 @@ const toolbarButtons = [
         _createToolButton(
           'Probe',
           'tool-probe',
-          'Probe',
+          '探针 Probe',
           [
             {
               commandName: 'setToolActive',
@@ -469,7 +469,7 @@ const toolbarButtons = [
         _createToggleButton(
           'cine',
           'tool-cine',
-          'Cine',
+          '连续播放 Cine',
           [
             {
               commandName: 'toggleCine',
@@ -481,7 +481,7 @@ const toolbarButtons = [
         _createToolButton(
           'Angle',
           'tool-angle',
-          'Angle',
+          '角度 Angle',
           [
             {
               commandName: 'setToolActive',
@@ -496,7 +496,7 @@ const toolbarButtons = [
         _createToolButton(
           'Magnify',
           'tool-magnify',
-          'Magnify',
+          '放大镜 Magnify',
           [
             {
               commandName: 'setToolActive',
@@ -511,7 +511,7 @@ const toolbarButtons = [
         _createToolButton(
           'Rectangle',
           'tool-rectangle',
-          'Rectangle',
+          '矩形 Rectangle',
           [
             {
               commandName: 'setToolActive',
@@ -526,7 +526,7 @@ const toolbarButtons = [
         _createActionButton(
           'TagBrowser',
           'list-bullets',
-          'Dicom Tag Browser',
+          '标签浏览 Dicom Tag Browser',
           [
             {
               commandName: 'openDICOMTagViewer',

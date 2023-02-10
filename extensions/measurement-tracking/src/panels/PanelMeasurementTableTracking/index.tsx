@@ -246,7 +246,7 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
       >
         {displayStudySummary.key && (
           <StudySummary
-            date={formatDate(displayStudySummary.date)}
+            date={formatDate(displayStudySummary.date, "YYYY-MM-DD")}
             modality={displayStudySummary.modality}
             description={displayStudySummary.description}
           />
