@@ -266,7 +266,7 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
           />
         )}
       </div>
-      <div className="flex justify-center p-4">
+      {/* <div className="flex justify-center p-4">
         <ActionButtons
           onExportClick={exportReport}
           onCreateReportClick={() => {
@@ -280,7 +280,7 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }) {
             displayMeasurementsWithoutFindings.length === 0
           }
         />
-      </div>
+      </div> */}
     </>
   );
 }
