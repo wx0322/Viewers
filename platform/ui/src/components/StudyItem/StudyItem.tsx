@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import moment from 'moment';
 import { Icon } from '../';
+import { useTranslation } from 'react-i18next';
 
 const baseClasses =
   'first:border-0 border-t border-secondary-light cursor-pointer select-none outline-none';
@@ -17,10 +18,11 @@ const StudyItem = ({
   onClick,
 }) => {
 
+  const { t } = useTranslation("StudyBrowser");
   const studyDate =
-  date &&
-  moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY'], true).isValid() &&
-  moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY']).format('YYYY-MM-DD');
+    date &&
+    moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY'], true).isValid() &&
+    moment(date, ['YYYYMMDD', 'YYYY.MM.DD', 'DD-MMM-YYYY']).format('YYYY-MM-DD');
 
   return (
     <div
@@ -31,7 +33,7 @@ const StudyItem = ({
       onClick={onClick}
       onKeyDown={onClick}
       role="button"
-      tabIndex="0"
+      tabIndex={0}
     >
       <div className="flex flex-col flex-1 px-4 pb-2">
         <div className="flex flex-row items-center justify-between pt-2 pb-2">
@@ -59,7 +61,7 @@ const StudyItem = ({
             )}
           >
             <Icon name="tracked" className="w-4 mr-2 text-primary-light" />
-            {trackedSeries} Tracked Series
+            {trackedSeries} {t("Tracked Series")}
           </div>
         </div>
       )}
