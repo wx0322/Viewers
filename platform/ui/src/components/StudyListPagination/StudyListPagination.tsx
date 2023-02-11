@@ -53,7 +53,7 @@ const StudyListPagination = ({
           <div className="">
             <div className="flex items-center">
               <Typography className="opacity-60 mr-4 text-base">
-                Page {currentPage}
+                {t('Page')} {currentPage}
               </Typography>
               <ButtonGroup>
                 <Button
