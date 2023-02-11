@@ -6,6 +6,10 @@ export default function formatPN(name) {
     return;
   }
 
+  if (typeof name !== "string") {
+    return;
+  }
+
   // Convert the first ^ to a ', '. String.replace() only affects
   // the first appearance of the character.
   const commaBetweenFirstAndLast = name.replace('^', ', ');
