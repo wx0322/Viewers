@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import 'moment/locale/zh-cn';
+import { useTranslation } from 'react-i18next';
 
 /** REACT DATES */
 import { DateRangePicker, isInclusivelyBeforeDay } from 'react-dates';
@@ -46,6 +48,7 @@ const renderYearsOptions = () => {
 };
 
 const DateRange = (props) => {
+  const { t } = useTranslation("Common");
   const { id, onChange, startDate, endDate } = props;
   const [focusedInput, setFocusedInput] = useState(null);
   const renderYearsOptionsCallback = useCallback(renderYearsOptions, []);
@@ -67,7 +70,7 @@ const DateRange = (props) => {
                 })
               }
             >
-              {text}
+              {t(text) as string}
             </button>
           );
         })}
@@ -143,8 +146,8 @@ const DateRange = (props) => {
       /** OPTIONAL */
       renderCalendarInfo={renderDatePresets}
       renderMonthElement={renderMonthElement}
-      startDatePlaceholderText={'Start Date'}
-      endDatePlaceholderText={'End Date'}
+      startDatePlaceholderText={t('Start Date')}
+      endDatePlaceholderText={t('End Date')}
       phrases={{
         closeDatePicker: 'Close',
         clearDates: 'Clear dates',
