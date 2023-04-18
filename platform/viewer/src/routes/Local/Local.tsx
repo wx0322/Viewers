@@ -88,12 +88,7 @@ function Local() {
       {({ getRootProps }) => (
         <div {...getRootProps()} style={{ width: '100%', height: '100%' }}>
           <div className="h-screen w-screen flex justify-center items-center ">
-            <div className="py-8 px-8 mx-auto bg-secondary-dark drop-shadow-md space-y-2 rounded-lg">
-              <img
-                className="block mx-auto h-14"
-                src="./ohif-logo.svg"
-                alt="OHIF"
-              />
+            <div className="py-8 px-8 mx-auto bg-secondary-dark drop-shadow-md space-y-2 rounded-lg">             
               <div className="text-center space-y-2 pt-4">
                 {dropInitiated ? (
                   <div className="flex flex-col items-center justify-center pt-48">
@@ -104,19 +99,18 @@ function Local() {
                 ) : (
                   <div className="space-y-2">
                     <p className="text-blue-300 text-base">
-                      Note: You data is not uploaded to any server, it will stay
-                      in your local browser application
+                      注意：文件不会上传到任何服务器，仅保留在浏览器中
                     </p>
                     <p className="text-xg text-primary-active font-semibold pt-6">
-                      Drag and Drop DICOM files here to load them in the Viewer
+                      直接托拽DICOM文件到这里进行加载
                     </p>
-                    <p className="text-blue-300 text-lg">Or click to </p>
+                    <p className="text-blue-300 text-lg">或者</p>
                   </div>
                 )}
               </div>
               <div className="flex justify-around pt-4 ">
-                {getLoadButton(onDrop, 'Load files', false)}
-                {getLoadButton(onDrop, 'Load folders', true)}
+                {getLoadButton(onDrop, '加载文件', false)}
+                {getLoadButton(onDrop, '加载文件夹中的DICOM文件', true)}
               </div>
             </div>
           </div>
